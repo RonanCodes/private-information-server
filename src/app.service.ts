@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
+import * as privateInformation from '../private-information.json';
+
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getPrivateInformation(): Record<string, string> {
+    return privateInformation;
   }
 }
